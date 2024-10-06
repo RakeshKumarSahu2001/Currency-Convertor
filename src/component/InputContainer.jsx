@@ -1,5 +1,5 @@
 export default function InputContainer({label,option,selectPlace,currencyChange,amount,amountChange}){
-
+    // console.log("options",option)
     return (<>
         <div className="h-[8rem] w-[21rem] flex flex-col bg-gray-200 rounded-lg">
             <div className="flex flex-row justify-between pt-5 px-5">
@@ -12,6 +12,7 @@ export default function InputContainer({label,option,selectPlace,currencyChange,
                 <select value={selectPlace} onChange={(e)=>currencyChange(e.target.value)} >
                     {
                         option.map((place)=>{
+                            {/* console.log(place,i) */}
                             return (<>
                                 <option key={place} value={place}>{place}</option>
                             </>)
