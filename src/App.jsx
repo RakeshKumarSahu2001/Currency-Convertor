@@ -211,7 +211,7 @@ function App() {
 
 
   return (<>
-    <div className='h-screen w-screen grid place-content-center space-y-2' style={{ background: url(`${backgroundImg}`) }}>
+    <div className='h-screen w-screen grid place-content-center space-y-2' style={{ background: `url(${backgroundImg})`,backgroundRepeat:"no-repeat",backgroundPosition:"center",backgroundSize:"cover" }}>
       <div className='h-96 w-96 grid place-content-center border-solid border-gray-950 space-y-3'>
         <InputContainer label="From" option={dataArr} selectPlace={from} currencyChange={(e) => setFrom(e)} amount={amount} amountChange={(e) => setAmount(e)} />
         <InputContainer label="To" option={dataArr} selectPlace={to} currencyChange={(e) => setTo(e)} amount={convertedAmount} amountChange={(e) => setAmount(e)} />
